@@ -7,8 +7,9 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class LectorDeArchivos {
-	public static ArrayList<Integer> leer(String path) {
-		ArrayList<Integer> sumadora = new ArrayList<Integer>();
+	
+	public static ArrayList<Aplicacion> leer(String path) {
+		ArrayList<Aplicacion> aplicaciones = new ArrayList<Aplicacion>();
 		
 		File file = new File(path);
 		Scanner scanner;
@@ -17,8 +18,8 @@ public class LectorDeArchivos {
 			scanner.useLocale(Locale.ENGLISH);
 
 			int cant = scanner.nextInt();
-			for (int i = 0; i < cant; i++) {				
-				sumadora.add(scanner.nextInt());
+			for (int i = 0; i < cant; i++) {
+				aplicaciones.add(new Aplicacion(scanner.nextInt()));
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
