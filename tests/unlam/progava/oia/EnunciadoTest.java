@@ -15,6 +15,32 @@ public class EnunciadoTest {
 		ejecutarCaso(0);
 	}
 	
+	//Modificar nombre de los casos de prueba
+	@Test
+	public void prueba() {
+		ejecutarCaso(1);
+	}
+	
+	@Test
+	public void prueba2() {
+		ejecutarCaso(2);
+	}
+	
+	@Test
+	public void prueba3() {
+		ejecutarCaso(3);
+	}
+	
+	@Test
+	public void prueba4() {
+		ejecutarCaso(4);
+	}
+	
+	@Test
+	public void prueba5() {
+		ejecutarCaso(5);
+	}
+	
 	public void ejecutarCaso(int numCaso) {	
 		String caso = "0" + numCaso;
 		

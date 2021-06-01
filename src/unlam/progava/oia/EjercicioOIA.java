@@ -1,6 +1,11 @@
 package unlam.progava.oia;
 
+import java.util.ArrayList;
+
 public class EjercicioOIA {
+	
+	ArrayList<Integer> sumadora = new ArrayList<Integer>();
+	int resultado;
 
 	public static void main(String[] args) {
 		EjercicioOIA ejercicio = new EjercicioOIA();
@@ -15,7 +20,9 @@ public class EjercicioOIA {
 	 * consigna desde el archivo.
 	 */
 	public void leer(String path) {
-		throw new RuntimeException("implementame");
+		
+		sumadora = LectorDeArchivos.leer(path);
+		//throw new RuntimeException("implementame");
 		
 	}
 	
@@ -24,7 +31,9 @@ public class EjercicioOIA {
 	 * consigna en el archivo.
 	 */
 	public void escribir(String path) {
-		throw new RuntimeException("implementame");
+		
+		EscritorDeArchivos.escribir(path,this.resultado);
+		//throw new RuntimeException("implementame");
 	}
 	
 	/**
@@ -35,6 +44,10 @@ public class EjercicioOIA {
 	 * Utilizar este mismo paquete para toda la resolución.
 	 */
 	public void resolver() {
-		throw new RuntimeException("implementame");
+		
+		for(int i = 0; i<sumadora.size();i++) {
+			this.resultado += sumadora.get(i);
+		}
+		//throw new RuntimeException("implementame");
 	}
 }
