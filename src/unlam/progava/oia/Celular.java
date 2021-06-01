@@ -14,10 +14,11 @@ public class Celular {
 		int sumaMB = 0;
 		
 		for(int i = 0; i<aplicaciones.size();i++) {
-			mejorCaso = 1;
+			mejorCaso = 0;
 			int j = i;
 			while(j<aplicaciones.size() && sumaMB<megasNecesarios) {
 				sumaMB+=aplicaciones.get(j).getCantidadMB();
+				mejorCaso++;
 			}
 		}
 		return 0;

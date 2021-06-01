@@ -46,9 +46,6 @@ public class EjercicioOIA {
 	 */
 	public void resolver() {
 		
-		for(int i = 0; i<sumadora.size();i++) {
-			this.resultado += sumadora.get(i);
-		}
 		//throw new RuntimeException("implementame");
 	}
 }
