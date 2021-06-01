@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class LectorDeArchivos {
 	
-	public static ArrayList<Aplicacion> leer(String path) {
+	public static int leer(String path) {
 		ArrayList<Aplicacion> aplicaciones = new ArrayList<Aplicacion>();
 		
 		File file = new File(path);
@@ -18,6 +18,7 @@ public class LectorDeArchivos {
 			scanner.useLocale(Locale.ENGLISH);
 
 			int cant = scanner.nextInt();
+			int megasNecesarios = scanner.nextInt();
 			for (int i = 0; i < cant; i++) {
 				aplicaciones.add(new Aplicacion(scanner.nextInt()));
 			}
@@ -25,6 +26,6 @@ public class LectorDeArchivos {
 			e.printStackTrace();
 		}
 		
-		return sumadora;
+		return megasNecesarios;
 	}
 }

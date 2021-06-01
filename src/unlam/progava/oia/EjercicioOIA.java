@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class EjercicioOIA {
 	
-	ArrayList<Integer> sumadora = new ArrayList<Integer>();
+	ArrayList<Integer> aplicaciones = new ArrayList<Integer>();
+	int megasNecesarios;
 	int resultado;
 
 	public static void main(String[] args) {
@@ -21,7 +22,7 @@ public class EjercicioOIA {
 	 */
 	public void leer(String path) {
 		
-		sumadora = LectorDeArchivos.leer(path);
+		megasNecesarios = LectorDeArchivos.leer(path,aplicaciones);
 		//throw new RuntimeException("implementame");
 		
 	}
