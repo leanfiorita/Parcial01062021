@@ -1,12 +1,11 @@
 package unlam.progava.oia;
 
-import java.util.ArrayList;
 
 public class EjercicioOIA {
 	
-	ArrayList<Aplicacion> aplicaciones = new ArrayList<Aplicacion>();
+	Celular celular = new Celular();
 	int megasNecesarios;
-	int resultado;
+	int cantidadAEliminar;
 
 	public static void main(String[] args) {
 		EjercicioOIA ejercicio = new EjercicioOIA();
@@ -21,10 +20,7 @@ public class EjercicioOIA {
 	 * consigna desde el archivo.
 	 */
 	public void leer(String path) {
-		
-		megasNecesarios = LectorDeArchivos.leer(path,aplicaciones);
-		//throw new RuntimeException("implementame");
-		
+		this.megasNecesarios = LectorDeArchivos.leer(path,celular);
 	}
 	
 	/**
@@ -32,9 +28,7 @@ public class EjercicioOIA {
 	 * consigna en el archivo.
 	 */
 	public void escribir(String path) {
-		
-		EscritorDeArchivos.escribir(path,this.resultado);
-		//throw new RuntimeException("implementame");
+		EscritorDeArchivos.escribir(path,this.cantidadAEliminar);
 	}
 	
 	/**
@@ -45,7 +39,6 @@ public class EjercicioOIA {
 	 * Utilizar este mismo paquete para toda la resolución.
 	 */
 	public void resolver() {
-		
-		//throw new RuntimeException("implementame");
+		this.cantidadAEliminar = celular.aplicacionesAEliminar(megasNecesarios);
 	}
 }

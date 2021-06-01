@@ -6,22 +6,28 @@ public class Celular {
 	
 	private ArrayList<Aplicacion> aplicaciones;
 	private int cantidadAplicacionesAEliminar;
-	private int cantidadMemoria;
 	
 	public int aplicacionesAEliminar(int megasNecesarios) {
 		
-		int mejorCaso;
+		this.cantidadAplicacionesAEliminar = aplicaciones.size();
 		int sumaMB = 0;
 		
 		for(int i = 0; i<aplicaciones.size();i++) {
-			mejorCaso = 0;
 			int j = i;
 			while(j<aplicaciones.size() && sumaMB<megasNecesarios) {
 				sumaMB+=aplicaciones.get(j).getCantidadMB();
-				mejorCaso++;
+				j++;
+			}
+			
+			if(cantidadAplicacionesAEliminar>(j-i)) {
+				cantidadAplicacionesAEliminar = j-i;
 			}
 		}
-		return 0;
+		return cantidadAplicacionesAEliminar;
+	}
+	
+	public void addAplicacion(Aplicacion aplicacion) {
+		aplicaciones.add(aplicacion);
 	}
 
 }

@@ -2,13 +2,12 @@ package unlam.progava.oia;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class LectorDeArchivos {
 	
-	public static int leer(String path, ArrayList<Aplicacion> aplicaciones) {
+	public static int leer(String path, Celular celular) {
 		
 		int megasNecesarios = 0;
 		File file = new File(path);
@@ -20,7 +19,7 @@ public class LectorDeArchivos {
 			int cant = scanner.nextInt();
 			megasNecesarios = scanner.nextInt();
 			for (int i = 0; i < cant; i++) {
-				aplicaciones.add(new Aplicacion(scanner.nextInt()));
+				celular.addAplicacion(new Aplicacion(scanner.nextInt()));
 			}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
