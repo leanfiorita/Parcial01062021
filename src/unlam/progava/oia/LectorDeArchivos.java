@@ -8,9 +8,9 @@ import java.util.Scanner;
 
 public class LectorDeArchivos {
 	
-	public static int leer(String path) {
-		ArrayList<Aplicacion> aplicaciones = new ArrayList<Aplicacion>();
+	public static int leer(String path, ArrayList<Aplicacion> aplicaciones) {
 		
+		int megasNecesarios = 0;
 		File file = new File(path);
 		Scanner scanner;
 		try {
@@ -18,7 +18,7 @@ public class LectorDeArchivos {
 			scanner.useLocale(Locale.ENGLISH);
 
 			int cant = scanner.nextInt();
-			int megasNecesarios = scanner.nextInt();
+			megasNecesarios = scanner.nextInt();
 			for (int i = 0; i < cant; i++) {
 				aplicaciones.add(new Aplicacion(scanner.nextInt()));
 			}

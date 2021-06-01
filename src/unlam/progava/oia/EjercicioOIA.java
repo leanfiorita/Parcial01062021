@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class EjercicioOIA {
 	
-	ArrayList<Integer> aplicaciones = new ArrayList<Integer>();
+	ArrayList<Aplicacion> aplicaciones = new ArrayList<Aplicacion>();
 	int megasNecesarios;
 	int resultado;
 

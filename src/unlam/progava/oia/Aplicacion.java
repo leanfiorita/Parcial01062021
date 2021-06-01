@@ -6,4 +6,8 @@ public class Aplicacion {
 	public Aplicacion(int cantidadMB) {
 		this.cantidadMB = cantidadMB;
 	}
+	
+	public int getCantidadMB() {
+		return this.cantidadMB;
+	}
 }
