@@ -7,6 +7,10 @@ public class Celular {
 	private ArrayList<Aplicacion> aplicaciones;
 	private int cantidadAplicacionesAEliminar;
 	
+	public Celular() {
+		aplicaciones = new ArrayList<Aplicacion>();
+	}
+	
 	public int aplicacionesAEliminar(int megasNecesarios) {
 		
 		this.cantidadAplicacionesAEliminar = aplicaciones.size();
@@ -18,10 +22,10 @@ public class Celular {
 				sumaMB+=aplicaciones.get(j).getCantidadMB();
 				j++;
 			}
-			
-			if(cantidadAplicacionesAEliminar>(j-i)) {
+			if(cantidadAplicacionesAEliminar>(j-i) && sumaMB>=megasNecesarios) {
 				cantidadAplicacionesAEliminar = j-i;
 			}
+			sumaMB=0;
 		}
 		return cantidadAplicacionesAEliminar;
 	}

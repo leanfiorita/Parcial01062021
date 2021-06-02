@@ -12,7 +12,6 @@ public class EscritorDeArchivos {
 		try {
 			file = new FileWriter(path);
 			printerWriter = new PrintWriter(file);
-
 			printerWriter.println(resultado);
 		} catch (Exception e) {
 			e.printStackTrace();
