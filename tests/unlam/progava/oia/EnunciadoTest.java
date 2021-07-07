@@ -17,27 +17,27 @@ public class EnunciadoTest {
 	
 	//Modificar nombre de los casos de prueba
 	@Test
-	public void prueba() {
+	public void eliminarTodo() {
 		ejecutarCaso(1);
 	}
 	
 	@Test
-	public void prueba2() {
+	public void flujoNormal() {
 		ejecutarCaso(2);
 	}
 	
 	@Test
-	public void prueba3() {
+	public void eliminarUna() {
 		ejecutarCaso(3);
 	}
 	
 	@Test
-	public void prueba4() {
+	public void fatiga() {
 		ejecutarCaso(4);
 	}
 	
 	@Test
-	public void prueba5() {
+	public void casoMinimo() {
 		ejecutarCaso(5);
 	}
 	
